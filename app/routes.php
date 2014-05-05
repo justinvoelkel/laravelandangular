@@ -13,11 +13,11 @@
 
 Route::get('admin',function()
 {
-    return 'this is the admin section';
+    return View::make('admin');
 });
 
 Route::get('/', function()
 {
-	return View::make('hello');
+	return View::make('index');
 });
 
