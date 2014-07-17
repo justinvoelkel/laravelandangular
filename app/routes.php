@@ -11,6 +11,11 @@
 |
 */
 
+Route::group(array('prefix'=>'/api'),function(){
+   Route::post('login/auth','AuthController@Login');
+   Route::get('login/destroy','AuthController@Logout');
+});
+
 Route::get('admin',function()
 {
     return View::make('admin');
