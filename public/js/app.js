@@ -5,8 +5,12 @@ var app = angular.module('blogApp',[
     'ngRoute',
     //Login
     'LoginCtrl',
+    //Posts
+    'PostCtrl',
     //AuthService
-    'AuthSrvc'
+    'AuthSrvc',
+    //CRUDService
+    'CRUDSrvc'
 ]);
 
 
@@ -20,6 +24,21 @@ var app = angular.module('blogApp',[
         $routeProvider.when('/',{
            templateUrl:'js/templates/login.html',
            controller:'LoginController'
+        });
+
+        $routeProvider.when('/dashboard',{
+            templateUrl:'js/templates/dashboard.html',
+            controller:'PostController'
+        });
+
+        $routeProvider.when('/add',{
+            templateUrl:'js/templates/add.html',
+            controller:'PostController'
+        });
+
+        $routeProvider.when('/edit/:id',{
+            templateUrl:'js/templates/edit.html',
+            controller:'EditPostController'
         });
 
     });

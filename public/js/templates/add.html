@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add a New Post</title>
+</head>
+<body>
+    <h1>Add a New Post</h1>
+    <div class="col-md-12 well"><a href="#/dashboard"><< Back to Dashboard</a></div>
+    <div class="col-md-12">
+        <form>
+            <div class="form-group">
+                <label for="title">Post Title</label>
+                <input ng-model="new.title" class="form-control" name="title" type="text"/>
+            </div>
+            <div class="form-group">
+                <textarea ng-model="new.content" class="form-control" cols="30" rows="10"></textarea>
+            </div>
+            <p class="bg-info">
+                {{flash}}
+            </p>
+            <button ng-click="submit()" class="btn btn-success">Save</button>
+        </form>
+    </div>
+
+</body>
+</html>

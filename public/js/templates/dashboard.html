@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Angular JS Dashboard</title>
+</head>
+<body>
+    <h1>The Most Dashing of Boards</h1>
+    <div class="col-md-3 well">
+        <a class="btn btn-primary" href="#/add">Create New Post</a>
+    </div><!--3cols-->
+    <div class="col-md-9">
+        <table class="table table-striped">
+            <tr>
+                <th></th>
+                <th>id</th>
+                <th>title</th>
+            </tr>
+            <tr ng-repeat="post in posts">
+                <td><a href="#/edit/{{post.id}}" class="btn btn-success btn-xs">edit</a></td>
+                <td>{{post.id}}</td>
+                <td>{{post.title}}</td>
+            </tr>
+        </table>
+    </div><!--9cols-->
+</body>
+</html>

@@ -11,6 +11,7 @@ var login = angular.module('LoginCtrl',[]);
                 auth.success(function(response){
                    if(response.id){
                        SessionService.set('auth',true); //This sets our session key/val pair as authenticated
+                       $location.path('/dashboard');
                    }else alert('could not verify your login');
                 });
         }
