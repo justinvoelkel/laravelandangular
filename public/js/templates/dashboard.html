@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Angular JS Dashboard</title>
+</head>
+<body>
+    <h1>The Most Dashing of Boards</h1>
+    <div class="col-md-12">
+        <p class="bg-info">
+            {{flash}}
+        </p>
+    </div>
+    <div class="col-md-3 well">
+        <a class="btn btn-primary" href="#/add">Create New Post</a>
+    </div><!--3cols-->
+    <div class="col-md-9">
+        <table class="table table-striped">
+            <tr>
+                <th></th>
+                <th></th>
+                <th>id</th>
+                <th>title</th>
+                <th></th>
+            </tr>
+            <tr ng-repeat="post in posts">
+                <td><a href="#/edit/{{post.id}}" class="btn btn-success btn-xs">edit</a></td>
+                <td>
+                    <a class="btn btn-xs" ng-click="status(post)" ng-class="{'btn-success':post.live==1,'btn-warning':post.live==0}">
+                     <span ng-show="post.live==1">click for draft</span>
+                     <span ng-show="post.live==0">click for live</span>
+                    </a>
+                </td>
+                <td>{{post.id}}</td>
+                <td>{{post.title}}</td>
+                <td><a ng-click="remove(post.id,$index)" class="btn btn-danger btn-xs">delete</a></td>
+            </tr>
+        </table>
+    </div><!--9cols-->
+</body>
+</html>
