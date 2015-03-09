@@ -56,13 +56,8 @@ return array(
 			'driver'    => 'mysql',
 			'host'      => 'localhost',
 			'database'  => 'demoapp',
-<<<<<<< HEAD
 			'username'  => 'dev',
 			'password'  => 'password',
-=======
-			'username'  => 'root',
-			'password'  => 'Voltron%',
->>>>>>> 97c7f97c02c87b233466c1ebbfea4bb0c96f80a3
 			'charset'   => 'utf8',
 			'collation' => 'utf8_unicode_ci',
 			'prefix'    => '',
