@@ -14,5 +14,11 @@ var login = angular.module('LoginCtrl',[]);
                        $location.path('/dashboard');
                    }else alert('could not verify your login');
                 });
-        }
+        };
+        $scope.logout = function(){
+            var logout = Login.destroy();
+                logout.success(function(){
+                    $location.path('/');
+                });
+        };
     });
