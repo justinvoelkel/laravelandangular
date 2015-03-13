@@ -9,7 +9,7 @@
 
     <title>Blog Administration</title>
     <!--css-->
-    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="styles/styles.css"/>
 
     <!--js-->
