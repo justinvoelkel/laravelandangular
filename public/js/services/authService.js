@@ -16,6 +16,9 @@ var login = angular.module('AuthSrvc',[]);
                     SessionService.unset('auth');
                 });
                 return logoutUser;
+            },
+            checkLoginStatus:function() {
+                return SessionService.get('auth') ? true : false;
             }
         }
     });

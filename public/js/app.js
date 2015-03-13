@@ -14,8 +14,16 @@ var app = angular.module('blogApp',[
 ]);
 
 
-    app.run(function(){
-
+    app.run(function($rootScope,$location,Login){
+        $rootScope.$on('$routeChangeStart', function() {
+            var whiteList   = ['/']; //the login is the only unguarded route - everything else needs to check session auth
+            var loggedIn    = Login.checkLoginStatus();//boolean - if user is logged in
+            var routeSafe = !$.inArray($location.path(),whiteList);//boolean - is route safe or protected
+            if(!loggedIn && !routeSafe) {
+                $location.path('/');
+                alert('You must be logged in to view this page!');
+            }
+        });
     });
 
     //This will handle all of our routing
