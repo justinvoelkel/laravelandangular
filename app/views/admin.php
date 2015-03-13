@@ -13,11 +13,11 @@
     <link rel="stylesheet" href="styles/styles.css"/>
 
     <!--js-->
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 
     <!--angular-->
-    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular.js"></script>
-    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular-route.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular-route.js"></script>
 
     <!--angular resources-->
     <script src="js/app.js"></script>
