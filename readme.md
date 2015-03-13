@@ -8,6 +8,7 @@
 * [Part Four - The Dashboard Part Deux and a Posts Party](http://justinvoelkel.me/laravel-angularjs-part-four/)
 * [Part Five - Delete Posts and Status Updates] (http://justinvoelkel.me/laravel-and-angularjs-part-five-delete-posts-update-status-and-show-some-people/)
 * [Bonus Coverage - Handling Logouts] (http://justinvoelkel.me/laravel-and-angularjs-authentication-bonus-handling-logouts/)
+* [Bonus Coverage - Restricting Routes in Angular ](http://justinvoelkel.me/laravel-and-angularjs-bonus-coverage-restricting-routes-in-angular/)
 
 ## Official Documentation For Laravel
 
