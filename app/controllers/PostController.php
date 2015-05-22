@@ -4,12 +4,16 @@ class PostController extends \BaseController {
 
 	/**
 	 * Display a listing of the resource.
-	 *
+	 * @param live
 	 * @return Response
 	 */
-	public function index()
+	public function index($live = null)
 	{
-		$posts = Post::all();
+        if (isset($live)) {
+            $posts = Post::where('live', $live)->get();
+        } else {
+            $posts = Post::all();
+        }
 
         return $posts;
 	}
@@ -49,11 +53,18 @@ class PostController extends \BaseController {
 	 * Display the specified resource.
 	 *
 	 * @param  int  $id
+     * @param  int  $live
 	 * @return Response
 	 */
-	public function show($id)
+	public function show($id, $live = null)
 	{
-		return Post::find($id);
+		if (isset($live)) {
+            $post = Post::where('id', $id)->where('live', $live)->first();
+        } else {
+            $post = Post::find($id);
+        }
+
+        return $post;
 	}
 
 

@@ -14,9 +14,7 @@
 Route::group(array('prefix'=>'/api'),function(){
    Route::post('login/auth','AuthController@Login');
    Route::get('login/destroy','AuthController@Logout');
-
    Route::resource('posts','PostController');
-
 });
 
 Route::get('admin',function()
@@ -26,6 +24,13 @@ Route::get('admin',function()
 
 Route::get('/', function()
 {
-	return View::make('index');
+    $posts = new PostController();
+	return View::make('index')->with('posts', $posts->index(1));
+});
+
+Route::get('/post/{id}', function($id)
+{
+    $posts = new PostController();
+    return View::make('single')->with('post', $posts->show($id,1));
 });
 
